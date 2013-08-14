@@ -2,4 +2,4 @@
 $m = new Memcache();
 $m->addServer( 'localhost', 11211 );
 $m->flush();
-$m->set( 'key', date( 'Y/m/d H:i:s' ), 0, 60 );
+$m->set( 'key', new DateTime( 'now', new DateTimezone( 'Asia/Tokyo' ) ), 0, 60 );

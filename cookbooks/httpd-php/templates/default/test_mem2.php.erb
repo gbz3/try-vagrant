@@ -2,5 +2,5 @@
 $m = new Memcache();
 $m->addServer( 'localhost', 11211 );
 if( $val = $m->get( 'key' ) ) {
-  echo $val;
+  echo $val->format( 'Y-m-d H:i:s' );
 }

@@ -16,6 +16,20 @@ template "/var/www/html/info.php" do
   mode 0644
 end
 
+template "/var/www/html/test_mem1.php" do
+  source "test_mem1.php.erb"
+  owner "apache"
+  group "apache"
+  mode 0644
+end
+
+template "/var/www/html/test_mem2.php" do
+  source "test_mem2.php.erb"
+  owner "apache"
+  group "apache"
+  mode 0644
+end
+
 template "/etc/httpd/conf/httpd.conf" do
   source "httpd.conf.erb"
   owner "root"
