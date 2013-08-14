@@ -1,0 +1,5 @@
+<?php
+$m = new Memcache();
+$m->addServer( 'localhost', 11211 );
+$m->flush();
+$m->set( 'key', date( 'Y/m/d H:i:s' ), 0, 60 );
