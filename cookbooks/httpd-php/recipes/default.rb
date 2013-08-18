@@ -1,4 +1,4 @@
-%w{ httpd php php-pecl-memcache }.each do |pkg|
+%w{ httpd php php-pecl-memcache php-devel php-pear }.each do |pkg|
   package pkg do
     action :install
   end

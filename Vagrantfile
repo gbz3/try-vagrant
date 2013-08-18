@@ -94,6 +94,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   chef.json = { :mysql_password => "foo" }
   # end
   config.vm.provision :chef_solo do |chef|
+    chef.add_recipe "devtools"
     chef.add_recipe "yum"
     chef.add_recipe "iptables"
     chef.add_recipe "memcached"
